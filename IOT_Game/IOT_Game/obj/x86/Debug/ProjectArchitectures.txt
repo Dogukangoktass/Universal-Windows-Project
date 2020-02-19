@@ -1,0 +1,1 @@
+C:\Projects\GameApplication\IOT_Game\IOT_Game\IOT_Game.csproj;x86

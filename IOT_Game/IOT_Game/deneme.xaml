@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="IOT_Game.Forms.deneme"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IOT_Game.Forms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Gray"
+    Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid >
+            <TextBlock Foreground="LightGreen" FontSize="100" x:Name="saniye" Text="0" Margin="484,287,485,353" />
+            <Button x:Name="btndeneme" Click="Btndeneme_Click" Height="50" Width="150" Background="White" Content="deneme text" HorizontalAlignment="Left" Margin="430,451,0,0" VerticalAlignment="Top"></Button>
+        </Grid>
+        <Grid Background="Red" x:Name="GridPanel">
+            <Button Background="LightBlue" Content="Oyna" x:Name="btnOyna" Click="BtnOyna_Click" HorizontalAlignment="Left" Margin="370,390,0,0" VerticalAlignment="Top" Height="119" Width="249"></Button>
+        </Grid>
+    </Grid>
+
+</Page>

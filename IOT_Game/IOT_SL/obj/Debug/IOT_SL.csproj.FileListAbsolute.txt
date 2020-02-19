@@ -1,0 +1,7 @@
+C:\Projects\GameApplication\IOT_Game\IOT_SL\bin\IOT_SL.dll.config
+C:\Projects\GameApplication\IOT_Game\IOT_SL\bin\IOT_SL.dll
+C:\Projects\GameApplication\IOT_Game\IOT_SL\bin\IOT_SL.pdb
+C:\Projects\GameApplication\IOT_Game\IOT_SL\obj\Debug\IOT_SL.csprojAssemblyReference.cache
+C:\Projects\GameApplication\IOT_Game\IOT_SL\obj\Debug\IOT_SL.csproj.CoreCompileInputs.cache
+C:\Projects\GameApplication\IOT_Game\IOT_SL\obj\Debug\IOT_SL.dll
+C:\Projects\GameApplication\IOT_Game\IOT_SL\obj\Debug\IOT_SL.pdb

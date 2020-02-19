@@ -1,0 +1,78 @@
+﻿<Page
+    x:Class="IOT_Game.Forms.User_Orientation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IOT_Game.Forms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="White">
+    <Grid>
+        <SplitView x:Name="MySplitView" DisplayMode="Inline"
+         IsPaneOpen="True" >
+
+            <SplitView.Pane >
+                <StackPanel Margin="0,30,0,0" Background="#ecf0f1" >
+
+                    <RadioButton Tag="KullaniciBilgileri" Click="RdBtnItem_Click" FontSize="17">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="OtherUser"></SymbolIcon>
+                            <TextBlock Text="Kullanıcı Bilgilerim" Margin="15,0,0,0"></TextBlock>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Tag="Oyna" Click="RdBtnItem_Click" FontSize="17">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="Play"></SymbolIcon>
+                            <TextBlock Text="Oyna" Margin="15,0,0,0"></TextBlock>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Tag="Siralamalar" Click="RdBtnItem_Click" FontSize="17">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="Go"></SymbolIcon>
+                            <TextBlock Text="Sıralamalar" Margin="15,0,0,0"></TextBlock>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Tag="AdminIslemleri" Click="RdBtnItem_Click" FontSize="17">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="Admin"></SymbolIcon>
+                            <TextBlock Text="Admin İşlemleri" Margin="15,0,0,0"></TextBlock>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Tag="SoruIslemleri" Click="btnQuestion" FontSize="17"> 
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="Library"></SymbolIcon>
+                            <TextBlock Text="Soru İşlemleri" Margin="15,0,0,0"></TextBlock>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <!--<RadioButton Tag="SoruIslemleri" Click="RdBtnItem_Click" FontSize="17">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="List"> </SymbolIcon>
+                            <TextBlock Text="Kategori İşlemleri" Margin="15,0,0,0"></TextBlock>
+                        </StackPanel>
+                    </RadioButton>-->
+                 
+
+
+                </StackPanel>
+
+            </SplitView.Pane>
+
+            <Frame x:Name="MainFrame" > </Frame>
+            
+        </SplitView>
+
+        <Button x:Name="HamburgerButton" Width="{Binding ElementName=MySplitView, Path=CompactPaneLength }" VerticalAlignment="Top" Background="#ecf0f1"   Click="MenuBtn_Click">
+            <StackPanel >
+                <Rectangle Width="15" Height="2" Margin="2" Fill="Black"></Rectangle>
+                <Rectangle Width="15" Height="2" Margin="2" Fill="Black"></Rectangle>
+                <Rectangle Width="15" Height="2" Margin="2" Fill="Black"></Rectangle>
+            </StackPanel>
+
+        </Button>
+    </Grid>
+</Page>

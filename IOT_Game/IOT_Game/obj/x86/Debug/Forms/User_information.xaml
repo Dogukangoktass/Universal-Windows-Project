@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="IOT_Game.Forms.User_information"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IOT_Game.Forms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Grid.Row="1" Margin="100,0,100,150">
+        <TextBlock  TextWrapping="Wrap" Text="Adınız "/>
+        <TextBox x:ConnectionId='2' x:Name="txtFirstName" TextWrapping="Wrap" />
+        <TextBlock  TextWrapping="Wrap" Text="Soyadınız " />
+        <TextBox x:ConnectionId='3' x:Name="txtLastName" TextWrapping="Wrap" />
+        <TextBlock  TextWrapping="Wrap" Text="Kullanıcı Adınız "/>
+        <TextBox x:ConnectionId='4' x:Name="txtUsername" TextWrapping="Wrap" />
+
+        <TextBlock  TextWrapping="Wrap" Text="Şifreniz "/>
+        <PasswordBox x:ConnectionId='5' x:Name="txtPassword" PasswordRevealMode="Peek" />
+        <TextBlock  TextWrapping="Wrap" Text="TC No "/>
+        <TextBox x:ConnectionId='6' x:Name="txtTcNo" TextWrapping="Wrap" />
+        <CalendarDatePicker x:ConnectionId='7' x:Name="CdtDateBirth" Header="Doğum Tarihiniz" PlaceholderText="Tarih Seçiniz" DateFormat="{}{day.integer} {month.full} {year.full}"/>
+        <ComboBox x:ConnectionId='8' x:Name="cmbGender" Header="Cinsiyet" PlaceholderText="Seçiniz..." Width="200">
+            <x:String>Erkek</x:String>
+            <x:String>Kadın</x:String>
+        </ComboBox>
+        <TextBlock  TextWrapping="Wrap" Text=" Email "/>
+        <TextBox x:ConnectionId='9' x:Name="txtEmail" TextWrapping="Wrap"/>
+        <TextBlock  TextWrapping="Wrap" Text="Telefon Numaranız" />
+        <TextBox x:ConnectionId='10' x:Name="txtPhoneNumber" TextWrapping="Wrap"  />
+        <ComboBox x:ConnectionId='11' x:Name="cmbJob" Header="Meslek" PlaceholderText="Seçiniz..." Width="200">
+            <x:String>Doktor</x:String>
+            <x:String>Mühendis</x:String>
+            <x:String>Öğretmen</x:String>
+            <x:String>Diğer</x:String>
+        </ComboBox>
+        <ComboBox x:ConnectionId='12' x:Name="cmbCity" Header="Şehir" PlaceholderText="Seçiniz..." Width="200">
+            <x:String>Istanbul</x:String>
+            <x:String>Ankara</x:String>
+            <x:String>Erzincan</x:String>
+        </ComboBox>
+        <StackPanel Orientation="Horizontal">
+            <Button x:ConnectionId='13' x:Name="btnSave" Content="Kaydet"                       Background="Green" Margin="10" />
+            <Button x:ConnectionId='14' x:Name="btnExit" Content="Çıkış"                       Background="Red" Margin="10" />
+        </StackPanel>
+    </StackPanel>
+</Page>
+

@@ -1,0 +1,12 @@
+C:\Projects\GameApplication\IOT_Game\IOT.Entities\bin\Debug\IOT.Entities.dll.config
+C:\Projects\GameApplication\IOT_Game\IOT.Entities\bin\Debug\IOT.Entities.dll
+C:\Projects\GameApplication\IOT_Game\IOT.Entities\bin\Debug\IOT.Entities.pdb
+C:\Projects\GameApplication\IOT_Game\IOT.Entities\bin\Debug\EntityFramework.dll
+C:\Projects\GameApplication\IOT_Game\IOT.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\GameApplication\IOT_Game\IOT.Entities\bin\Debug\EntityFramework.xml
+C:\Projects\GameApplication\IOT_Game\IOT.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\GameApplication\IOT_Game\IOT.Entities\obj\Debug\IOT.Entities.csprojAssemblyReference.cache
+C:\Projects\GameApplication\IOT_Game\IOT.Entities\obj\Debug\IOT.Entities.csproj.CoreCompileInputs.cache
+C:\Projects\GameApplication\IOT_Game\IOT.Entities\obj\Debug\IOT.Entities.csproj.CopyComplete
+C:\Projects\GameApplication\IOT_Game\IOT.Entities\obj\Debug\IOT.Entities.dll
+C:\Projects\GameApplication\IOT_Game\IOT.Entities\obj\Debug\IOT.Entities.pdb

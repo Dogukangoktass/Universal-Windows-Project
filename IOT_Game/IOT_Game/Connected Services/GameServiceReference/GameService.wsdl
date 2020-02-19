@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GameService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:32596/GameService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:32596/GameService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:32596/GameService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IOT.Entities" />
+      <xsd:import schemaLocation="http://localhost:32596/GameService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IOT.Entities.ViewModel" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGameService_LoginUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUser" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_LoginUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RemoveUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUser" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RemoveUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_EditUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditUser" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_EditUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_UserControl_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserControl" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_UserControl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserControlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GetQuestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestions" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GetQuestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_AddQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddQuestion" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_AddQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RemoveQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveQuestion" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_RemoveQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_EditQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditQuestion" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_EditQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GetCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategory" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GetCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GetRanks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRanks" />
+  </wsdl:message>
+  <wsdl:message name="IGameService_GetRanks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRanksResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGameService">
+    <wsdl:operation name="LoginUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/LoginUser" message="tns:IGameService_LoginUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/LoginUserResponse" message="tns:IGameService_LoginUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/GetUsers" message="tns:IGameService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/GetUsersResponse" message="tns:IGameService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/AddUser" message="tns:IGameService_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/AddUserResponse" message="tns:IGameService_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/RemoveUser" message="tns:IGameService_RemoveUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/RemoveUserResponse" message="tns:IGameService_RemoveUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/EditUser" message="tns:IGameService_EditUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/EditUserResponse" message="tns:IGameService_EditUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserControl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/UserControl" message="tns:IGameService_UserControl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/UserControlResponse" message="tns:IGameService_UserControl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/GetQuestions" message="tns:IGameService_GetQuestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/GetQuestionsResponse" message="tns:IGameService_GetQuestions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/AddQuestion" message="tns:IGameService_AddQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/AddQuestionResponse" message="tns:IGameService_AddQuestion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/RemoveQuestion" message="tns:IGameService_RemoveQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/RemoveQuestionResponse" message="tns:IGameService_RemoveQuestion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/EditQuestion" message="tns:IGameService_EditQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/EditQuestionResponse" message="tns:IGameService_EditQuestion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/GetCategory" message="tns:IGameService_GetCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/GetCategoryResponse" message="tns:IGameService_GetCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRanks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGameService/GetRanks" message="tns:IGameService_GetRanks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGameService/GetRanksResponse" message="tns:IGameService_GetRanks_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGameService" type="tns:IGameService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoginUser">
+      <soap:operation soapAction="http://tempuri.org/IGameService/LoginUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IGameService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IGameService/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUser">
+      <soap:operation soapAction="http://tempuri.org/IGameService/RemoveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditUser">
+      <soap:operation soapAction="http://tempuri.org/IGameService/EditUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserControl">
+      <soap:operation soapAction="http://tempuri.org/IGameService/UserControl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestions">
+      <soap:operation soapAction="http://tempuri.org/IGameService/GetQuestions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddQuestion">
+      <soap:operation soapAction="http://tempuri.org/IGameService/AddQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveQuestion">
+      <soap:operation soapAction="http://tempuri.org/IGameService/RemoveQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditQuestion">
+      <soap:operation soapAction="http://tempuri.org/IGameService/EditQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategory">
+      <soap:operation soapAction="http://tempuri.org/IGameService/GetCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRanks">
+      <soap:operation soapAction="http://tempuri.org/IGameService/GetRanks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GameService">
+    <wsdl:port name="BasicHttpBinding_IGameService" binding="tns:BasicHttpBinding_IGameService">
+      <soap:address location="http://localhost:32596/GameService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
